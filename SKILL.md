@@ -20,8 +20,8 @@ description: 把 YouTube 视频（尤其是无字幕的粤语/中文视频）转
 首次使用或报错时执行：
 
 ```bash
-[ -x ~/Desktop/yt_XUynngoQQto/venv_mlx/bin/python ] && \
-  ~/Desktop/yt_XUynngoQQto/venv_mlx/bin/python -c "import mlx_whisper; print('mlx_whisper', mlx_whisper.__version__)"
+[ -x ~/.local/share/yt-transcript/venv_mlx/bin/python ] && \
+  ~/.local/share/yt-transcript/venv_mlx/bin/python -c "import mlx_whisper; print('mlx_whisper', mlx_whisper.__version__)"
 ~/.local/bin/python3.11 -m yt_dlp --version
 ls ~/bgutil-ytdlp-pot-provider/repo/bgutil-ytdlp-pot-provider-2.0.2/server/build/main.js
 ```
@@ -69,7 +69,7 @@ bash ~/.claude/skills/yt-transcript/scripts/yt2md.sh "<URL>"
 ```bash
 cd <workdir>
 YT_ASR_PROMPT="以下是……的粵語分享，內容關於……" \
-  ~/Desktop/yt_XUynngoQQto/venv_mlx/bin/python \
+  ~/.local/share/yt-transcript/venv_mlx/bin/python \
   ~/.claude/skills/yt-transcript/scripts/asr_mlx.py \
   --src audio16k.wav --out transcript_raw
 ```
@@ -82,7 +82,7 @@ YT_ASR_PROMPT="以下是……的粵語分享，內容關於……" \
 ### Step 3 · 繁简与书面语
 
 ```bash
-~/Desktop/yt_XUynngoQQto/venv_mlx/bin/python \
+~/.local/share/yt-transcript/venv_mlx/bin/python \
   ~/.claude/skills/yt-transcript/scripts/convert.py transcript_raw.json > transcript_simp.txt
 ```
 
@@ -127,6 +127,7 @@ YT_ASR_PROMPT="以下是……的粵語分享，內容關於……" \
 | 路径 | 作用 |
 |---|---|
 | `scripts/yt2md.sh` | 一键管线（字幕检查 → 下载 → 转码 → 转写 → 转简体） |
+| `scripts/setup_env.sh` | 环境准备：建 venv 装 mlx-whisper、克隆编译 bgutil POT provider |
 | `scripts/asr_mlx.py` | mlx-whisper 分块转写，支持 `YT_ASR_PROMPT` |
 | `scripts/convert.py` | 繁→简 + 粤语口语书面化 |
 | `scripts/check_probe.py` | 重复幻觉检测（退出码 0 = 正常） |

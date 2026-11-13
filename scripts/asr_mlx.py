@@ -25,7 +25,7 @@ import numpy as np
 # ffmpeg 只是兜底（本脚本直接用 wave 读 PCM16 wav，不 fork 外部进程）。
 # 找不到也不影响运行。
 for _d in (os.environ.get("YT_FFMPEG_DIR", ""),
-           os.path.expanduser("~/Desktop/yt_XUynngoQQto/bin"),
+           os.path.expanduser("~/.local/share/yt-transcript/bin"),
            "/opt/homebrew/bin", "/usr/local/bin"):
     if _d and os.path.isdir(_d):
         os.environ["PATH"] = _d + os.pathsep + os.environ.get("PATH", "")

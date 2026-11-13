@@ -10,7 +10,7 @@
 
 **原因**：PyTorch 的 MPS 后端跑 whisper 有数值缺陷。**不是音频坏了**——用 ffmpeg 体检（`volumedetect`）确认音频正常：mean −32.8 dB、max −9.9 dB、394 处句间静音，各 5 分钟窗口响度均匀。
 
-**处理**：改用 mlx-whisper。`~/.Desktop/yt_XUynngoQQto/venv_mlx/bin/python -c "import mlx_whisper"` 确认装好，模型 `mlx-community/whisper-large-v3-mlx`。
+**处理**：改用 mlx-whisper。`~/.local/share/yt-transcript/venv_mlx/bin/python -c "import mlx_whisper"` 确认装好，模型 `mlx-community/whisper-large-v3-mlx`。
 
 ### A2. 某一块开始重复（如「他家族好多人」×20）
 

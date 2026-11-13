@@ -127,10 +127,10 @@ yt-transcript/
 
 | 变量 | 作用 | 默认 |
 |---|---|---|
-| `YT_VENV` | mlx-whisper 所在 venv | `~/Desktop/yt_XUynngoQQto/venv_mlx` |
+| `YT_VENV` | mlx-whisper 所在 venv | `~/.local/share/yt-transcript/venv_mlx` |
 | `YT_POT_SERVER` | bgutil provider 的 server 目录 | `~/bgutil-ytdlp-pot-provider/.../server` |
 | `YT_PY` | 跑 yt-dlp 的 Python（需 ≥3.10） | `~/.local/bin/python3.11` |
-| `YT_FFMPEG` | ffmpeg 路径 | `~/Desktop/yt_XUynngoQQto/bin/ffmpeg` |
+| `YT_FFMPEG` | ffmpeg 路径 | `~/.local/share/yt-transcript/bin/ffmpeg` |
 | `YT_ASR_PROMPT` | 转写提示词，**按视频领域改** | 香港小一入学相关词汇 |
 
 提示词对专有名词帮助很大。换领域时照着这个格式写：

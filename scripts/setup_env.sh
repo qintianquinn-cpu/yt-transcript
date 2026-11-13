@@ -15,7 +15,7 @@
 # ===========================================================================
 set -uo pipefail
 
-VENV="${YT_VENV:-$HOME/Desktop/yt_XUynngoQQto/venv_mlx}"
+VENV="${YT_VENV:-$HOME/.local/share/yt-transcript/venv_mlx}"
 POT_DIR="${YT_POT_DIR:-$HOME/bgutil-ytdlp-pot-provider}"
 POT_REPO="https://github.com/Brainicism/bgutil-ytdlp-pot-provider.git"
 

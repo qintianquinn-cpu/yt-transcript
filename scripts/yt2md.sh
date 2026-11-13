@@ -28,9 +28,9 @@ WORK="$OUTDIR/work"
 
 SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PY="${YT_PY:-$HOME/.local/bin/python3.11}"
-VENV="${YT_VENV:-$HOME/Desktop/yt_XUynngoQQto/venv_mlx}"
+VENV="${YT_VENV:-$HOME/.local/share/yt-transcript/venv_mlx}"
 SERVER="${YT_POT_SERVER:-$HOME/bgutil-ytdlp-pot-provider/repo/bgutil-ytdlp-pot-provider-2.0.2/server}"
-FFMPEG="${YT_FFMPEG:-$HOME/Desktop/yt_XUynngoQQto/bin/ffmpeg}"
+FFMPEG="${YT_FFMPEG:-$HOME/.local/share/yt-transcript/bin/ffmpeg}"
 [ -x "$FFMPEG" ] || FFMPEG="$(command -v ffmpeg || echo ffmpeg)"
 UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
 
